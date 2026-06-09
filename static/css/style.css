@@ -11,7 +11,7 @@ body {
 
 
 .encabezado {
-    background-color: #F8F9FA;     
+    background-color: white;     
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -20,28 +20,33 @@ body {
     height: 60px;                  /* Fijamos un alto promedio para que nunca cambie de tamaño */
 }
 
-.marca {
-    color: #212529;                
+.marca {          
     font-size: 1.25rem;            
     text-decoration: none;
     font-weight: 500;
+    color: black;
+    flex: 1;
+    text-align: start;
 }
 
 .nav {
     display: flex;
     align-items: center;           /* Todos los enlaces alineados horizontalmente al centro */
     gap: 16px;                     
+    color: black;
+    flex:1;
+    justify-content: flex-end;
 }
 
 .enlace {
-    color: rgba(33, 37, 41, 0.65); 
+    color: black; 
     text-decoration: none;
     font-size: 1rem;
     cursor: pointer;
 }
 
 .activo {
-    color: #212529;                
+    color: black;                
 }
 
 
@@ -155,4 +160,23 @@ body {
     font-weight: 600;
     cursor: pointer;
     border-radius: 6px;
+}
+
+.img{
+    height: 50px;
+}
+
+.e{
+    display: flex;
+    align-items: center;
+}
+
+.hover {
+    transition: transform 0.3s ease, margin-left 1s ease
+}
+
+.hover:hover {
+    transform: scale(1.2);
+   /* .1 añade 10% en tamaño */
+    margin-left: 10px;
 }
