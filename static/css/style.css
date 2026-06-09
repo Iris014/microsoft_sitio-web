@@ -239,152 +239,176 @@ body {
 }
 
 /* ========================================================
-   SISTEMA DE REGULACIÓN, EQUILIBRIO Y DISTRIBUCIÓN
+   DISEÑO VERSÁTIL DE COLORES E INTEGRACIÓN DE ESPACIOS
    ======================================================== */
 
+/* El fondo base de toda la página es un blanco limpio y moderno */
 .contenedor-principal {
     display: flex;
     justify-content: center;
-    padding-top: 50px;             /* Espacio superior uniforme */
+    padding-top: 40px;             
     padding-bottom: 80px;          
     background-color: #FFFFFF;     
 }
 
-.seccion-herramientas {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1200px;             /* Limita el ancho para que no se desparrame en pantallas gigantes */
-    padding-left: 5%;              /* Relleno simétrico a los lados */
-    padding-right: 5%;             
-}
-
-/* Título e introducción en perfecta alineación */
 .presentacion {
     display: flex;
-    justify-content: flex-start;   /* Alineado al inicio del bloque, igual que los subtítulos */
-    padding-bottom: 50px;          
+    justify-content: center;
+    padding-bottom: 60px;          
 }
 
 .titulo-herramientas {
-    font-size: 3.5rem;
+    font-size: 4rem;               
     color: #091F2C;
     font-weight: 700;
 }
 
-/* Espacio controlado entre bloques de categorías */
-.funcion-herramientas {
+/* Espaciado masivo entre las secciones para que todo respire */
+.seccion-herramientas {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    gap: 0px;                      /* Quitamos el gap global para que los bloques de color se peguen perfectamente */
+    width: 100%;
 }
 
+
+/* ========================================================
+   ESTRATEGIA CROMÁTICA POR CATEGORÍAS (BLOQUES VERSÁTILES)
+   ======================================================== */
+
+/* CATEGORÍA 1: Sistemas Operativos (Tono Azul Tecnológico muy suave) */
+.funcion-herramientas:nth-of-type(1) {
+    background-color: #F0F4F8;     
+    padding-top: 60px;             
+    padding-bottom: 60px;          
+}
+
+/* CATEGORÍA 2: Suite de Productividad (Tono Blanco Puro para contrastar) */
+.funcion-herramientas:nth-of-type(2) {
+    background-color: #FFFFFF;     
+    padding-top: 60px;             
+    padding-bottom: 60px;          
+}
+
+/* CATEGORÍA 3: Comunicación y Organización (Tono Morado/Azulado suave tipo Teams/Outlook) */
+.funcion-herramientas:nth-of-type(3) {
+    background-color: #F3F2F1;     
+    padding-top: 60px;             
+    padding-bottom: 60px;          
+}
+
+/* CATEGORÍA 4: Almacenamiento y Seguridad (Tono Gris de protección limpio) */
+.funcion-herramientas:nth-of-type(4) {
+    background-color: #F8F9FA;     
+    padding-top: 60px;             
+    padding-bottom: 60px;          
+}
+
+/* CATEGORÍA 5: Creatividad (Tono sutilmente cálido/pastel muy creativo) */
+.funcion-herramientas:nth-of-type(5) {
+    background-color: #FAF6F0;     
+    padding-top: 60px;             
+    padding-bottom: 60px;          
+}
+
+
+/* --- CONFIGURACIÓN DE LOS SUBTÍTULOS DE CATEGORÍA --- */
 .funcion {
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: #091F2C;
     font-weight: 600;
-    padding-bottom: 40px;          /* Vacío regulado entre título y contenido */
+    padding-left: 60px;            /* Relleno lateral para alinearse al contenido */
+    padding-bottom: 30px;          
 }
 
 
-/* --- SECCIÓN EN ZIG-ZAG (Sistemas Operativos) --- */
+/* --- SECCIÓN 1: FORMATO GIGANTE INTERCALADO (ZIG-ZAG) --- */
 .caja-herramientas-vertical {
     display: flex;
     flex-direction: column;
-    gap: 60px;                     /* Separación idéntica entre bloques horizontales */
+    gap: 40px;                     
 }
 
 .herramienta-gigante {
     display: flex;
-    flex-direction: row;           
+    flex-direction: row;           /* Imagen izquierda, texto derecha por defecto */
     align-items: center;
-    justify-content: space-between; /* Distribuye el espacio sobrante equitativamente en medio */
-    width: 100%;
+    justify-content: space-between;
+    gap: 80px;                     
+    padding-left: 60px;            
+    padding-right: 60px;           
 }
 
+/* El truco del intercalado que cambia el orden visual */
 .herramienta-invertida {
-    flex-direction: row-reverse;   /* Intercalado limpio */
+    flex-direction: row-reverse;   /* Texto izquierda, imagen derecha */
 }
 
-/* Regulación de anchos 45% - 50% para evitar saltos de texto */
 .contenedor-foto {
     display: flex;
-    width: 45%;                    /* Espacio fijo para el bloque de imagen */
-    height: 220px;                 /* Altura fija para que el vacío sea idéntico si no hay foto */
-    background-color: #F3F2F1;     /* Fondo de cortesía que simula la imagen mientras carga */
-    border-radius: 6px;
-    align-items: center;
-    justify-content: center;
+    width: 45%;                    
 }
 
 .contenedor-texto {
     display: flex;
     flex-direction: column;
-    width: 50%;                    /* Bloque de texto balanceado */
-    gap: 12px;
+    gap: 20px;
+    width: 50%;                    
+}
+
+.imagen-rectangulo {
+    width: 100%;
+    height: 260px;                 /* Banners masivos y llamativos */
+    border-radius: 6px;            
 }
 
 
-/* --- SECCIÓN DE A DOS (Suite de Productividad y otros) --- */
+/* --- SECCIÓN 2: FORMATO DOBLE COLUMNA (CONTENIDOS CORTOS) --- */
 .caja-herramientas {
     display: flex;
     flex-direction: row;           
     flex-wrap: wrap;               
-    justify-content: space-between;/* Fuerza a las dos columnas a irse a los extremos de forma simétrica */
-    gap: 60px 0px;                 /* 60px de separación entre filas, 0 en columnas porque space-between lo calcula */
+    justify-content: space-between;
+    padding-left: 60px;            
+    padding-right: 60px;           
+    gap: 40px;                     /* Distancia entre filas si hay más de dos elementos */
 }
 
-/* Cada bloque ocupa exactamente el 46% para dejar un 8% de aire central perfecto */
+/* Elementos flotando integrados en el espacio sin bordes ni cajas blancas */
 .herramienta {
-    width: 46%;                    
+    width: 46%;                    /* Reparte el espacio exactamente para dos por fila */
     display: flex;
     flex-direction: column;        
-    gap: 16px;                     
+    gap: 24px;                     /* Espacio amplio entre la imagen y el bloque de texto */
 }
 
-/* Estabilizador de logos para evitar que el texto suba y rompa la cuadrícula */
 .contenedor-foto-bloque {
     display: flex;
     width: 100%;
-    height: 120px;                 /* Altura reservada obligatoria */
-    background-color: #F3F2F1;     /* Cuadrante gris limpio que balancea el diseño */
-    border-radius: 6px;
-    align-items: center;
-    justify-content: center;
 }
 
 .contenedor-texto-bloque {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-
-/* --- CONTROLES DE IMAGEN --- */
-.imagen-rectangulo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 6px;
+    gap: 14px;
 }
 
 .imagen-cuadrado {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+    width: 130px;                  /* Iconografía gigante que capta la atención de inmediato */
+    height: 130px;
+    border-radius: 6px;
 }
 
 
-/* --- CONTROL TEXTOS --- */
+/* --- TEXTOS E INTERLINEADO ULTRA LIMPIO --- */
 .titulo-herramienta {
-    font-size: 1.65rem;
+    font-size: 1.9rem;             /* Nombres tipográficos destacados */
     color: #091F2C;
     font-weight: 600;
 }
 
 .info-herramienta {
-    font-size: 1.05rem;
-    color: #444444;
-    line-height: 26px;             /* Interlineado equilibrado */
+    font-size: 1.15rem;            
+    color: rgba(33, 37, 41, 0.75); 
+    line-height: 30px;             /* Interlineado amplio para una lectura descansada */
 }
