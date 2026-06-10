@@ -218,6 +218,8 @@ body {
     width: 200px;
 }
 
+
+
 .e {
     display: block;
     margin: 0 auto;
@@ -239,176 +241,207 @@ body {
 }
 
 /* ========================================================
-   DISEÑO VERSÁTIL DE COLORES E INTEGRACIÓN DE ESPACIOS
+   SISTEMA MODULAR ADAPTABLE (ESTILO MICROSOFT)
    ======================================================== */
 
-/* El fondo base de toda la página es un blanco limpio y moderno */
 .contenedor-principal {
     display: flex;
     justify-content: center;
     padding-top: 40px;             
-    padding-bottom: 80px;          
+    padding-bottom: 0px;           
     background-color: #FFFFFF;     
 }
 
-.presentacion {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 60px;          
-}
-
-.titulo-herramientas {
-    font-size: 4rem;               
-    color: #091F2C;
-    font-weight: 700;
-}
-
-/* Espaciado masivo entre las secciones para que todo respire */
 .seccion-herramientas {
     display: flex;
     flex-direction: column;
-    gap: 0px;                      /* Quitamos el gap global para que los bloques de color se peguen perfectamente */
     width: 100%;
+}
+
+/* FONDOS EXTENSOS PARA SEPARAR CATEGORÍAS */
+.fondo-blanco { background-color: #FFFFFF; padding-top: 80px; padding-bottom: 80px; }
+.fondo-gris { background-color: #F3F2F1; padding-top: 80px; padding-bottom: 80px; }
+.fondo-crema { background-color: #FDF3E9; padding-top: 80px; padding-bottom: 80px; }
+
+/* TÍTULOS CON ALTA JERARQUÍA Y CONTRASTE DE TAMAÑO */
+.titulo-herramientas {
+    font-size: 4rem;               
+    color: #111111;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.funcion {
+    font-size: 2.4rem;             /* Mucho más grande que los nombres de las herramientas */
+    color: #111111;
+    font-weight: 600;
+    padding-left: 10%;             
+    padding-bottom: 40px;          
 }
 
 
 /* ========================================================
-   ESTRATEGIA CROMÁTICA POR CATEGORÍAS (BLOQUES VERSÁTILES)
+   ESTRUCTURA A: PARA INFORMACIÓN PRIORITARIA E IMÁGENES GRANDES
+   (Usa esto cuando la foto sea el centro de atención)
    ======================================================== */
 
-/* CATEGORÍA 1: Sistemas Operativos (Tono Azul Tecnológico muy suave) */
-.funcion-herramientas:nth-of-type(1) {
-    background-color: #F0F4F8;     
-    padding-top: 60px;             
-    padding-bottom: 60px;          
+.bloque-impacto-masivo {
+    display: flex;
+    flex-direction: column;        
+    align-items: center;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 30px;
+    padding-bottom: 80px;          /* Espacio extenso para que respire */
 }
 
-/* CATEGORÍA 2: Suite de Productividad (Tono Blanco Puro para contrastar) */
-.funcion-herramientas:nth-of-type(2) {
-    background-color: #FFFFFF;     
-    padding-top: 60px;             
-    padding-bottom: 60px;          
-}
-
-/* CATEGORÍA 3: Comunicación y Organización (Tono Morado/Azulado suave tipo Teams/Outlook) */
-.funcion-herramientas:nth-of-type(3) {
-    background-color: #F3F2F1;     
-    padding-top: 60px;             
-    padding-bottom: 60px;          
-}
-
-/* CATEGORÍA 4: Almacenamiento y Seguridad (Tono Gris de protección limpio) */
-.funcion-herramientas:nth-of-type(4) {
-    background-color: #F8F9FA;     
-    padding-top: 60px;             
-    padding-bottom: 60px;          
-}
-
-/* CATEGORÍA 5: Creatividad (Tono sutilmente cálido/pastel muy creativo) */
-.funcion-herramientas:nth-of-type(5) {
-    background-color: #FAF6F0;     
-    padding-top: 60px;             
-    padding-bottom: 60px;          
-}
-
-
-/* --- CONFIGURACIÓN DE LOS SUBTÍTULOS DE CATEGORÍA --- */
-.funcion {
-    font-size: 2.25rem;
-    color: #091F2C;
-    font-weight: 600;
-    padding-left: 60px;            /* Relleno lateral para alinearse al contenido */
-    padding-bottom: 30px;          
-}
-
-
-/* --- SECCIÓN 1: FORMATO GIGANTE INTERCALADO (ZIG-ZAG) --- */
-.caja-herramientas-vertical {
+.bloque-impacto-texto {
     display: flex;
     flex-direction: column;
-    gap: 40px;                     
-}
-
-.herramienta-gigante {
-    display: flex;
-    flex-direction: row;           /* Imagen izquierda, texto derecha por defecto */
     align-items: center;
-    justify-content: space-between;
-    gap: 80px;                     
-    padding-left: 60px;            
-    padding-right: 60px;           
+    gap: 16px;
 }
 
-/* El truco del intercalado que cambia el orden visual */
-.herramienta-invertida {
-    flex-direction: row-reverse;   /* Texto izquierda, imagen derecha */
-}
-
-.contenedor-foto {
+/* Contenedor gigante para resaltar capturas o banners grandes */
+.contenedor-foto-gigante {
     display: flex;
-    width: 45%;                    
+    width: 100%;
+    max-width: 1000px;             /* Espacio masivo para la imagen */
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0px 25px 55px rgba(9, 31, 44, 0.12); /* Sombra corporativa con gran dispersión */
 }
 
-.contenedor-texto {
+.imagen-rectangulo-grande {
+    width: 100%;                   
+    height: auto;                  /* Proporción nativa para imágenes de gran formato */
+    border-radius: 12px;
+}
+
+
+/* ========================================================
+   ESTRUCTURA B: PARA VARIEDAD DE CONTENIDO MEDIANO (ASIMÉTRICO)
+   (Usa esto cuando tengas textos de diferentes largos y logos cuadrados)
+   ======================================================== */
+
+.galeria-variedad-de-dos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 40px 0px;                 
+}
+
+/* Tarjeta base integrada que flota en el espacio */
+.tarjeta-mediana {
+    width: 48%;                    
+    background-color: #FFFFFF;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 50%;                    
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.04); /* Sombra muy sutil */
 }
 
-.imagen-rectangulo {
-    width: 100%;
-    height: 260px;                 /* Banners masivos y llamativos */
-    border-radius: 6px;            
+/* Clases desalineadas: aplícalas para romper la simetría según el tipo de información */
+.tarjeta-extensa {
+    padding: 50px 40px;            /* Más aire interno: ideal para textos largos con botones */
+}
+
+.tarjeta-compacta {
+    padding: 30px 40px;            /* Más pequeña: ideal para herramientas con poca descripción */
+}
+
+.imagen-cuadrada-mediana {
+    width: 70px;                   /* Tamaño intermedio formal para logos */
+    height: auto;
 }
 
 
-/* --- SECCIÓN 2: FORMATO DOBLE COLUMNA (CONTENIDOS CORTOS) --- */
-.caja-herramientas {
+/* ========================================================
+   ESTRUCTURA C: PARA GRAN CANTIDAD DE INFORMACIÓN CORTA
+   (Usa esto cuando sean muchas herramientas y quieras un diseño limpio sin saturar)
+   ======================================================== */
+
+.lista-informacion-densa {
     display: flex;
-    flex-direction: row;           
-    flex-wrap: wrap;               
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 60px;            
-    padding-right: 60px;           
-    gap: 40px;                     /* Distancia entre filas si hay más de dos elementos */
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 50px 0px;
 }
 
-/* Elementos flotando integrados en el espacio sin bordes ni cajas blancas */
-.herramienta {
-    width: 46%;                    /* Reparte el espacio exactamente para dos por fila */
-    display: flex;
-    flex-direction: column;        
-    gap: 24px;                     /* Espacio amplio entre la imagen y el bloque de texto */
-}
-
-.contenedor-foto-bloque {
-    display: flex;
-    width: 100%;
-}
-
-.contenedor-texto-bloque {
+/* Bloques de texto puros, sin caja blanca, integrados totalmente al fondo de la web */
+.bloque-texto-puro {
+    width: 46%;                    /* Distribución de a dos limpia y extensa */
     display: flex;
     flex-direction: column;
-    gap: 14px;
-}
-
-.imagen-cuadrado {
-    width: 130px;                  /* Iconografía gigante que capta la atención de inmediato */
-    height: 130px;
-    border-radius: 6px;
+    gap: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08); /* Una sutil línea sofisticada que organiza el contenido */
+    padding-top: 20px;
 }
 
 
-/* --- TEXTOS E INTERLINEADO ULTRA LIMPIO --- */
-.titulo-herramienta {
-    font-size: 1.9rem;             /* Nombres tipográficos destacados */
-    color: #091F2C;
+/* ========================================================
+   COMPONENTES INTERACTIVOS Y DETALLES VISUALES (UX)
+   ======================================================== */
+
+.bloque-botones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    padding-top: 8px;
+}
+
+/* Botón formal de alta visibilidad para acciones principales */
+.boton-primario-azul {
+    background-color: #0067B8;     
+    color: #FFFFFF;
+    font-size: 1rem;
     font-weight: 600;
+    border: none;
+    padding: 12px 26px;            /* Relleno balanceado */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton-primario-azul:hover {
+    background-color: #005293;     
+    box-shadow: 0px 4px 12px rgba(0, 103, 184, 0.3); /* Sombra interactiva del color del botón */
+}
+
+/* Letras de botones interactivas para acciones secundarias */
+.enlace-letra-interactiva {
+    font-size: 1.05rem;
+    color: #0067B8;                
+    font-weight: 600;
+    text-decoration: none;         
+}
+
+.enlace-letra-interactiva:hover {
+    color: #091F2C;                
+    text-decoration: underline;    /* Aparece línea interactiva clásica de Microsoft */
+}
+
+
+/* --- SELECCIÓN DE TAMAÑOS DE LETRA (JERARQUÍA COMPLETA) --- */
+.titulo-herramienta {
+    font-size: 1.8rem;             /* Nombre de la herramienta llamativo */
+    color: #111111;
+    font-weight: 600;
+    margin: 0;
 }
 
 .info-herramienta {
-    font-size: 1.15rem;            
-    color: rgba(33, 37, 41, 0.75); 
-    line-height: 30px;             /* Interlineado amplio para una lectura descansada */
+    font-size: 1.1rem;             /* Letra de apoyo perfectamente legible */
+    color: #444444;                /* Cumple con las pautas de contraste y accesibilidad */
+    line-height: 26px;             /* Interlineado cómodo */
+    margin: 0;
 }
