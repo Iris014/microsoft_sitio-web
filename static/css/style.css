@@ -240,9 +240,6 @@ body {
     margin-left: 10px;
 }
 
-/* ========================================================
-   SISTEMA MODULAR ADAPTABLE (ESTILO MICROSOFT)
-   ======================================================== */
 
 .contenedor-principal {
     display: flex;
@@ -258,12 +255,10 @@ body {
     width: 100%;
 }
 
-/* FONDOS EXTENSOS PARA SEPARAR CATEGORÍAS */
 .fondo-blanco { background-color: #FFFFFF; padding-top: 80px; padding-bottom: 80px; }
 .fondo-gris { background-color: #F3F2F1; padding-top: 80px; padding-bottom: 80px; }
 .fondo-crema { background-color: #FDF3E9; padding-top: 80px; padding-bottom: 80px; }
 
-/* TÍTULOS CON ALTA JERARQUÍA Y CONTRASTE DE TAMAÑO */
 .titulo-herramientas {
     font-size: 4rem;               
     color: #111111;
@@ -280,11 +275,6 @@ body {
     padding-bottom: 40px;          
 }
 
-
-/* ========================================================
-   ESTRUCTURA A: PARA INFORMACIÓN PRIORITARIA E IMÁGENES GRANDES
-   (Usa esto cuando la foto sea el centro de atención)
-   ======================================================== */
 
 .bloque-impacto-masivo {
     display: flex;
@@ -304,7 +294,6 @@ body {
     gap: 16px;
 }
 
-/* Contenedor gigante para resaltar capturas o banners grandes */
 .contenedor-foto-gigante {
     display: flex;
     width: 100%;
@@ -321,11 +310,6 @@ body {
 }
 
 
-/* ========================================================
-   ESTRUCTURA B: PARA VARIEDAD DE CONTENIDO MEDIANO (ASIMÉTRICO)
-   (Usa esto cuando tengas textos de diferentes largos y logos cuadrados)
-   ======================================================== */
-
 .galeria-variedad-de-dos {
     display: flex;
     flex-direction: row;
@@ -336,7 +320,6 @@ body {
     gap: 40px 0px;                 
 }
 
-/* Tarjeta base integrada que flota en el espacio */
 .tarjeta-mediana {
     width: 48%;                    
     background-color: #FFFFFF;
@@ -347,7 +330,6 @@ body {
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.04); /* Sombra muy sutil */
 }
 
-/* Clases desalineadas: aplícalas para romper la simetría según el tipo de información */
 .tarjeta-extensa {
     padding: 50px 40px;            /* Más aire interno: ideal para textos largos con botones */
 }
@@ -362,11 +344,6 @@ body {
 }
 
 
-/* ========================================================
-   ESTRUCTURA C: PARA GRAN CANTIDAD DE INFORMACIÓN CORTA
-   (Usa esto cuando sean muchas herramientas y quieras un diseño limpio sin saturar)
-   ======================================================== */
-
 .lista-informacion-densa {
     display: flex;
     flex-direction: row;
@@ -377,7 +354,6 @@ body {
     gap: 50px 0px;
 }
 
-/* Bloques de texto puros, sin caja blanca, integrados totalmente al fondo de la web */
 .bloque-texto-puro {
     width: 46%;                    /* Distribución de a dos limpia y extensa */
     display: flex;
@@ -388,10 +364,6 @@ body {
 }
 
 
-/* ========================================================
-   COMPONENTES INTERACTIVOS Y DETALLES VISUALES (UX)
-   ======================================================== */
-
 .bloque-botones {
     display: flex;
     flex-direction: row;
@@ -400,7 +372,6 @@ body {
     padding-top: 8px;
 }
 
-/* Botón formal de alta visibilidad para acciones principales */
 .boton-primario-azul {
     background-color: #0067B8;     
     color: #FFFFFF;
@@ -417,7 +388,6 @@ body {
     box-shadow: 0px 4px 12px rgba(0, 103, 184, 0.3); /* Sombra interactiva del color del botón */
 }
 
-/* Letras de botones interactivas para acciones secundarias */
 .enlace-letra-interactiva {
     font-size: 1.05rem;
     color: #0067B8;                
@@ -431,7 +401,6 @@ body {
 }
 
 
-/* --- SELECCIÓN DE TAMAÑOS DE LETRA (JERARQUÍA COMPLETA) --- */
 .titulo-herramienta {
     font-size: 1.8rem;             /* Nombre de la herramienta llamativo */
     color: #111111;
