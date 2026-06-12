@@ -15,9 +15,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 24px;
+    padding: 16px 24px; 
     border-bottom: 1px solid #DEE2E6;
-    height: 60px;
 }
 
 .marca {
@@ -26,7 +25,7 @@ body {
     font-weight: 500;
     color: black;
     flex: 1;
-    text-align: start;
+    padding: 10px;
 }
 
 .nav {
@@ -93,10 +92,6 @@ body {
     font-size: 1rem;
     border-radius: 0px 6px;
     outline: none;
-}
-
-.pie-de-pagina {
-    padding: 16px;
 }
 
 .seccion-principal {
@@ -191,13 +186,19 @@ body {
     font-size: 1.05rem;
 }
 
+.imagen-cuadrada-grande{
+    width: auto;
+    height: auto;
+}
+
 .hover {
     transition: transform 0.3s ease, margin-left 1s ease
 }
 
 .hover:hover {
-    transform: scale(1.2);
-    margin-left: 10px;
+    transform: scale(1.05);
+    margin-left: 5px;
+    color: gray; 
 }
 
 .hover2 {
@@ -237,12 +238,18 @@ body {
 .presentacion {
     text-align: center;
     padding: 50px 20px;
+    margin: auto;
+    height: 60%;
 }
 
 .titulo-herramientas {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #242424;
+    font-size: 3rem;
+    color: #111111;
+    font-weight: 700;
+    padding-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .funcion-herramientas {
@@ -282,14 +289,6 @@ body {
     background-color: #FDF3E9;
     padding-top: 80px;
     padding-bottom: 80px;
-}
-
-.titulo-herramientas {
-    font-size: 4rem;
-    color: #111111;
-    font-weight: 700;
-    text-align: center;
-    padding-bottom: 30px;
 }
 
 .funcion {
@@ -412,15 +411,16 @@ body {
 
 .espacio-imagen-cuadrícula {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .imagen-cuadrada-normal {
-    position: relative;
-    left: 150px;
     width: 320px;
+    max-width: 350px;
     border-radius: 6px;
 }
 
