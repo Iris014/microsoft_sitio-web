@@ -108,7 +108,7 @@ body {
     border-radius: 16px;
     box-shadow: 0px 10px 25px gray;
     gap: 30px;
-    height: 500px;
+    height: 600px;
 }
 
 .grupo-busqueda {
@@ -243,7 +243,7 @@ body {
 }
 
 .p {
-    text-align: justify;
+    text-align: center;
     font-size: 1.05rem;
 }
 
@@ -256,6 +256,22 @@ body {
     margin-left: 10px;
 }
 
+.hover2 {
+    transition: transform 0.3s ease, margin-right 1s ease
+}
+
+.hover2:hover {
+    transform: scale(1.1);
+    margin-right: 10px;
+}
+
+.hover3 {
+    transition: transform 0.3s ease, margin-right 1s ease
+}
+
+.hover3:hover {
+    transform: scale(1.1);
+}
 /* Fin de JAVASCRIPT */
 
 
@@ -289,6 +305,10 @@ body {
     color: #242424;
     font-weight: 600;
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    padding-left: 0;
 }
 
 .seccion-herramientas {
@@ -552,11 +572,8 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0px 10px 25px gray;
-    /* Sombra elegante */
     width: 45%;
-    /* Muestra dos videos por fila en pantallas grandes */
     min-width: 320px;
-    /* Evita que se encojan demasiado en pantallas pequeñas */
     display: flex;
     flex-direction: column;
 
