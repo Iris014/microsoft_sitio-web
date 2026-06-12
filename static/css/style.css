@@ -11,17 +11,17 @@ body {
 
 
 .encabezado {
-    background-color: white;     
+    background-color: white;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     padding: 16px 24px;
-    border-bottom: 1px solid #DEE2E6; 
+    border-bottom: 1px solid #DEE2E6;
     height: 60px;
 }
 
-.marca {          
-    font-size: 1.25rem;            
+.marca {
+    font-size: 1.25rem;
     text-decoration: none;
     font-weight: 500;
     color: black;
@@ -32,21 +32,21 @@ body {
 .nav {
     display: flex;
     align-items: center;
-    gap: 16px;                     
+    gap: 16px;
     color: black;
-    flex:1;
+    flex: 1;
     justify-content: flex-end;
 }
 
 .enlace {
-    color: black; 
+    color: black;
     text-decoration: none;
     font-size: 1rem;
     cursor: pointer;
 }
 
 .activo {
-    color: black;                
+    color: black;
 }
 
 
@@ -54,7 +54,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    height: 60px; 
+    height: 60px;
 }
 
 .caja-flotante {
@@ -64,7 +64,7 @@ body {
     border-radius: 6px;
     padding: 8px 0px;
     width: 140px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
     top: 55px;
     transform: scale(0);
@@ -97,14 +97,17 @@ body {
 .contenedor-principal2 {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra todo el contenido */
-    background-color: #FFFFFF; /* Fondo blanco para la tarjeta */
-    max-width: 900px; /* Evita que se estire demasiado */
-    margin: 40px auto; 
+    align-items: center;
+    /* Centra todo el contenido */
+    background-color: #FFFFFF;
+    /* Fondo blanco para la tarjeta */
+    max-width: 900px;
+    /* Evita que se estire demasiado */
+    margin: 40px auto;
     padding: 50px;
-    border-radius: 16px; 
+    border-radius: 16px;
     box-shadow: 0px 10px 25px gray;
-    gap: 30px; 
+    gap: 30px;
     height: 500px;
 }
 
@@ -128,7 +131,7 @@ body {
     color: #212529;
     border: 1px solid #CED4DA;
     border-left: none;
-    padding: 6px 12px;             
+    padding: 6px 12px;
     font-size: 1rem;
     border-radius: 0px 6px;
     outline: none;
@@ -155,10 +158,13 @@ body {
 }
 
 .pie-de-pagina {
-    background-color: #091F2C; /* Un azul muy oscuro y elegante */
-    color: #FFFFFF; /* Texto en blanco para resaltar */
+    background-color: #091F2C;
+    /* Un azul muy oscuro y elegante */
+    color: #FFFFFF;
+    /* Texto en blanco para resaltar */
     padding: 20px 20px;
-    margin-top: auto; /* Ayuda a empujar el footer hacia abajo */
+    margin-top: auto;
+    /* Ayuda a empujar el footer hacia abajo */
     font-size: 0.9rem;
 }
 
@@ -168,22 +174,26 @@ body {
     align-items: center;
     gap: 15px;
     max-width: 900px;
-    margin: 0 auto; /* Centra el contenido */
+    margin: 0 auto;
+    /* Centra el contenido */
 }
 
 .footer-enlaces {
     display: flex;
-    gap: 20px; /* Separación entre los links */
+    gap: 20px;
+    /* Separación entre los links */
 }
 
 .footer-enlaces a {
-    color: #A0C4FF; /* Un tono azul claro que combina muy bien */
+    color: #A0C4FF;
+    /* Un tono azul claro que combina muy bien */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-enlaces a:hover {
-    color: #FFFFFF; /* Se vuelve blanco al pasar el cursor */
+    color: #FFFFFF;
+    /* Se vuelve blanco al pasar el cursor */
     text-decoration: underline;
 }
 
@@ -209,18 +219,19 @@ body {
     border-radius: 6px;
 }
 
-.img{
+.img {
     height: 50px;
 }
 
-.img2{
-    height:150px;
+.img2 {
+    height: 150px;
     width: 200px;
 }
 
 .imagen-rectangulo {
-    width: 400px; 
-    height: 300px;                                      /* Proporción nativa para imágenes de gran formato */
+    width: 400px;
+    height: 300px;
+    /* Proporción nativa para imágenes de gran formato */
     border-radius: 12px;
 }
 
@@ -228,11 +239,12 @@ body {
     display: block;
     margin: 0 auto;
     border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 .p {
     text-align: justify;
-    font-size: 1.05rem; 
+    font-size: 1.05rem;
 }
 
 .hover {
@@ -243,6 +255,7 @@ body {
     transform: scale(1.2);
     margin-left: 10px;
 }
+
 /* Fin de JAVASCRIPT */
 
 
@@ -250,9 +263,6 @@ body {
 
 
 /* HERRAMIENTAS */
-/* ========================================================
-   SISTEMA MODULAR ADAPTABLE (ESTILO MICROSOFT CROMÁTICO)
-   ======================================================== */
 
 
 .contenedor-principal {
@@ -281,21 +291,32 @@ body {
     margin-bottom: 40px;
 }
 
-
 .seccion-herramientas {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-/* FONDOS EXTENSOS PARA SEPARAR CATEGORÍAS */
-.fondo-blanco { background-color: #FFFFFF; padding-top: 80px; padding-bottom: 80px; }
-.fondo-gris { background-color: #F3F2F1; padding-top: 80px; padding-bottom: 80px; }
-.fondo-crema { background-color: #FDF3E9; padding-top: 80px; padding-bottom: 80px; }
+.fondo-blanco {
+    background-color: #FFFFFF;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 
-/* TÍTULOS CON ALTA JERARQUÍA Y CONTRASTE DE TAMAÑO */
+.fondo-gris {
+    background-color: #F3F2F1;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.fondo-crema {
+    background-color: #FDF3E9;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
 .titulo-herramientas {
-    font-size: 4rem;               
+    font-size: 4rem;
     color: #111111;
     font-weight: 700;
     text-align: center;
@@ -303,27 +324,23 @@ body {
 }
 
 .funcion {
-    font-size: 2.4rem;             /* Mucho más grande que los nombres de las herramientas */
+    font-size: 2.4rem;
     color: #111111;
     font-weight: 600;
-    padding-left: 10%;             
-    padding-bottom: 40px;          
+    padding-left: 10%;
+    padding-bottom: 40px;
 }
 
 
-/* ========================================================
-   ESTRUCTURA A: PARA INFORMACIÓN PRIORITARIA E IMÁGENES GRANDES
-   ======================================================== */
-
 .bloque-impacto-masivo {
     display: flex;
-    flex-direction: column;        
+    flex-direction: column;
     align-items: center;
     text-align: center;
     padding-left: 10%;
     padding-right: 10%;
     gap: 30px;
-    padding-bottom: 80px;          /* Espacio extenso para que respire */
+    padding-bottom: 80px;
 }
 
 .bloque-impacto-texto {
@@ -333,34 +350,28 @@ body {
     gap: 16px;
 }
 
-/* Contenedor gigante para resaltar capturas o banners grandes */
 .contenedor-foto-gigante {
     display: flex;
     width: 100%;
-    max-width: 1000px;             /* Espacio masivo para la imagen */
+    max-width: 1000px;
     background-color: #FFFFFF;
     border-radius: 12px;
 }
 
-/* --- ADAPTACIÓN DE COLOR NIVEL 1 (SOMBRAS DE MARCA) --- */
 .sombra-windows {
-    box-shadow: 0px 25px 55px rgba(0, 164, 239, 0.15); /* Sombra tintada con el azul oficial de Windows */
+    box-shadow: 0px 25px 55px rgba(0, 164, 239, 0.15);
 }
 
 .sombra-edge {
-    box-shadow: 0px 25px 55px rgba(0, 120, 212, 0.15); /* Sombra tintada con el azul/verde de Edge */
+    box-shadow: 0px 25px 55px rgba(0, 120, 212, 0.15);
 }
 
 .imagen-rectangulo-grande {
-    width: 100%;                   
-    height: auto;                  /* Proporción nativa para imágenes de gran formato */
+    width: 100%;
+    height: auto;
     border-radius: 12px;
 }
 
-
-/* ========================================================
-   ESTRUCTURA B: PARA VARIEDAD DE CONTENIDO MEDIANO (ASIMÉTRICO)
-   ======================================================== */
 
 .galeria-variedad-de-dos {
     display: flex;
@@ -369,52 +380,50 @@ body {
     justify-content: space-between;
     padding-left: 10%;
     padding-right: 10%;
-    gap: 40px 0px;                 
+    gap: 40px 0px;
 }
 
-/* Tarjeta base integrada que flota en el espacio */
 .tarjeta-mediana {
-    width: 48%;                    
+    width: 48%;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* Clases desalineadas según el largo de la información */
-.tarjeta-extensa { padding: 50px 40px; }
-.tarjeta-compacta { padding: 30px 40px; }
+.tarjeta-extensa {
+    padding: 50px 40px;
+}
 
-/* --- ADAPTACIÓN DE COLOR NIVEL 2 (FONDOS PASTEL SEGÚN LA HERRAMIENTA) --- */
+.tarjeta-compacta {
+    padding: 30px 40px;
+}
+
 .tarjeta-word {
-    background-color: #F3F7FC;     /* Tono azul muy suave e清 de Word */
-    box-shadow: 0px 15px 35px rgba(43, 87, 154, 0.06); 
+    background-color: #F3F7FC;
+    box-shadow: 0px 15px 35px rgba(43, 87, 154, 0.06);
 }
 
 .tarjeta-excel {
-    background-color: #F2F9F4;     /* Tono verde ecológico y limpio de Excel */
+    background-color: #F2F9F4;
     box-shadow: 0px 15px 35px rgba(16, 124, 65, 0.06);
 }
 
 .tarjeta-outlook {
-    background-color: #F3F8FC;     /* Tono azul corporativo claro de Outlook */
+    background-color: #F3F8FC;
     box-shadow: 0px 15px 35px rgba(0, 120, 212, 0.06);
 }
 
 .tarjeta-powerpoint {
-    background-color: #FDF5F2;     /* Tono terracota/naranja suave de PowerPoint */
+    background-color: #FDF5F2;
     box-shadow: 0px 15px 35px rgba(183, 71, 42, 0.06);
 }
 
 .imagen-cuadrada-mediana {
-    width: 70px;                   /* Tamaño intermedio formal para logos */
+    width: 70px;
     height: auto;
 }
 
-
-/* ========================================================
-   ESTRUCTURA C: PARA GRAN CANTIDAD DE INFORMACIÓN CORTA
-   ======================================================== */
 
 .lista-informacion-densa {
     display: flex;
@@ -426,27 +435,38 @@ body {
     gap: 50px 0px;
 }
 
-/* Bloques de texto puros integrados totalmente al espacio */
 .bloque-texto-puro {
-    width: 46%;                    
+    width: 46%;
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding-top: 20px;
 }
 
-/* --- ADAPTACIÓN DE COLOR NIVEL 3 (LÍNEAS DE MARCA QUE GUÍAN AL CONSUMIDOR) --- */
-.borde-onedrive { border-top: 3px solid #0078D4; }  /* Línea azul nube */
-.borde-defender { border-top: 3px solid #107C41; }  /* Línea verde protección */
-.borde-teams { border-top: 3px solid #6264A7; }     /* Línea morada colaboración */
-.borde-onenote { border-top: 3px solid #80397B; }   /* Línea púrpura notas */
-.borde-clipchamp { border-top: 3px solid #5000CC; } /* Línea violeta edición */
-.borde-designer { border-top: 3px solid #FF4500; }  /* Línea naranja creatividad */
+.borde-onedrive {
+    border-top: 3px solid #0078D4;
+}
 
+.borde-defender {
+    border-top: 3px solid #107C41;
+}
 
-/* ========================================================
-   COMPONENTES INTERACTIVOS Y DETALLES VISUALES (UX)
-   ======================================================== */
+.borde-teams {
+    border-top: 3px solid #6264A7;
+}
+
+.borde-onenote {
+    border-top: 3px solid #80397B;
+}
+
+.borde-clipchamp {
+    border-top: 3px solid #5000CC;
+}
+
+.borde-designer {
+    border-top: 3px solid #FF4500;
+}
+
 
 .bloque-botones {
     display: flex;
@@ -456,51 +476,50 @@ body {
     padding-top: 8px;
 }
 
-/* Botón formal de alta visibilidad para acciones principales */
 .boton-primario-azul {
-    background-color: #0067B8;     
+    background-color: #0067B8;
     color: #FFFFFF;
     font-size: 1rem;
     font-weight: 600;
     border: none;
-    padding: 12px 26px;            
+    padding: 12px 26px;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .boton-primario-azul:hover {
-    background-color: #005293;     
-    box-shadow: 0px 4px 12px rgba(0, 103, 184, 0.3); 
+    background-color: #005293;
+    box-shadow: 0px 4px 12px rgba(0, 103, 184, 0.3);
 }
 
-/* Letras de botones interactivas para acciones secundarias */
 .enlace-letra-interactiva {
     font-size: 1.05rem;
-    color: #0067B8;                
+    color: #0067B8;
     font-weight: 600;
-    text-decoration: none;         
+    text-decoration: none;
 }
 
 .enlace-letra-interactiva:hover {
-    color: #091F2C;                
-    text-decoration: underline;    
+    color: #091F2C;
+    text-decoration: underline;
 }
 
 
-/* --- SELECCIÓN DE TAMAÑOS DE LETRA (JERARQUÍA COMPLETA) --- */
 .titulo-herramienta {
-    font-size: 1.8rem;             
+    font-size: 1.8rem;
     color: #111111;
     font-weight: 600;
     margin: 0;
 }
 
 .info-herramienta {
-    font-size: 1.1rem;             
-    color: #444444;                
-    line-height: 26px;             
+    font-size: 1.1rem;
+    color: #444444;
+    line-height: 26px;
     margin: 0;
 }
+
+
 /* Fin de HERRAMIENTAS */
 
 
@@ -532,9 +551,12 @@ body {
     background-color: #FFFFFF;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0px 10px 25px gray; /* Sombra elegante */
-    width: 45%; /* Muestra dos videos por fila en pantallas grandes */
-    min-width: 320px; /* Evita que se encojan demasiado en pantallas pequeñas */
+    box-shadow: 0px 10px 25px gray;
+    /* Sombra elegante */
+    width: 45%;
+    /* Muestra dos videos por fila en pantallas grandes */
+    min-width: 320px;
+    /* Evita que se encojan demasiado en pantallas pequeñas */
     display: flex;
     flex-direction: column;
 
