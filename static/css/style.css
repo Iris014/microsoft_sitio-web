@@ -67,10 +67,7 @@ body {
     box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
 
     top: 55px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    transform: scale(0);
 }
 
 .boton-javascript {
@@ -85,10 +82,9 @@ body {
     background-color: #F8F9FA;
 }
 
+
 .menu-desplegable:hover .caja-flotante {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    transform: scale(1);
 }
 
 
@@ -254,14 +250,37 @@ body {
 
 
 /* HERRAMIENTAS */
+/* ========================================================
+   SISTEMA MODULAR ADAPTABLE (ESTILO MICROSOFT CROMÁTICO)
+   ======================================================== */
+
 
 .contenedor-principal {
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;             
-    padding-bottom: 0px;           
-    background-color: #FFFFFF;     
+    width: 100%;
 }
+
+.presentacion {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.titulo-herramientas {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: #242424;
+}
+
+.funcion-herramientas {
+    width: 100%;
+}
+
+.funcion {
+    font-size: 1.8rem;
+    color: #242424;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
 
 .seccion-herramientas {
     display: flex;
@@ -269,10 +288,12 @@ body {
     width: 100%;
 }
 
+/* FONDOS EXTENSOS PARA SEPARAR CATEGORÍAS */
 .fondo-blanco { background-color: #FFFFFF; padding-top: 80px; padding-bottom: 80px; }
 .fondo-gris { background-color: #F3F2F1; padding-top: 80px; padding-bottom: 80px; }
 .fondo-crema { background-color: #FDF3E9; padding-top: 80px; padding-bottom: 80px; }
 
+/* TÍTULOS CON ALTA JERARQUÍA Y CONTRASTE DE TAMAÑO */
 .titulo-herramientas {
     font-size: 4rem;               
     color: #111111;
@@ -289,6 +310,10 @@ body {
     padding-bottom: 40px;          
 }
 
+
+/* ========================================================
+   ESTRUCTURA A: PARA INFORMACIÓN PRIORITARIA E IMÁGENES GRANDES
+   ======================================================== */
 
 .bloque-impacto-masivo {
     display: flex;
@@ -308,6 +333,7 @@ body {
     gap: 16px;
 }
 
+/* Contenedor gigante para resaltar capturas o banners grandes */
 .contenedor-foto-gigante {
     display: flex;
     width: 100%;
@@ -316,6 +342,7 @@ body {
     border-radius: 12px;
 }
 
+/* --- ADAPTACIÓN DE COLOR NIVEL 1 (SOMBRAS DE MARCA) --- */
 .sombra-windows {
     box-shadow: 0px 25px 55px rgba(0, 164, 239, 0.15); /* Sombra tintada con el azul oficial de Windows */
 }
@@ -331,6 +358,10 @@ body {
 }
 
 
+/* ========================================================
+   ESTRUCTURA B: PARA VARIEDAD DE CONTENIDO MEDIANO (ASIMÉTRICO)
+   ======================================================== */
+
 .galeria-variedad-de-dos {
     display: flex;
     flex-direction: row;
@@ -341,6 +372,7 @@ body {
     gap: 40px 0px;                 
 }
 
+/* Tarjeta base integrada que flota en el espacio */
 .tarjeta-mediana {
     width: 48%;                    
     border-radius: 16px;
@@ -349,9 +381,11 @@ body {
     gap: 20px;
 }
 
+/* Clases desalineadas según el largo de la información */
 .tarjeta-extensa { padding: 50px 40px; }
 .tarjeta-compacta { padding: 30px 40px; }
 
+/* --- ADAPTACIÓN DE COLOR NIVEL 2 (FONDOS PASTEL SEGÚN LA HERRAMIENTA) --- */
 .tarjeta-word {
     background-color: #F3F7FC;     /* Tono azul muy suave e清 de Word */
     box-shadow: 0px 15px 35px rgba(43, 87, 154, 0.06); 
@@ -378,6 +412,10 @@ body {
 }
 
 
+/* ========================================================
+   ESTRUCTURA C: PARA GRAN CANTIDAD DE INFORMACIÓN CORTA
+   ======================================================== */
+
 .lista-informacion-densa {
     display: flex;
     flex-direction: row;
@@ -388,6 +426,7 @@ body {
     gap: 50px 0px;
 }
 
+/* Bloques de texto puros integrados totalmente al espacio */
 .bloque-texto-puro {
     width: 46%;                    
     display: flex;
@@ -396,6 +435,7 @@ body {
     padding-top: 20px;
 }
 
+/* --- ADAPTACIÓN DE COLOR NIVEL 3 (LÍNEAS DE MARCA QUE GUÍAN AL CONSUMIDOR) --- */
 .borde-onedrive { border-top: 3px solid #0078D4; }  /* Línea azul nube */
 .borde-defender { border-top: 3px solid #107C41; }  /* Línea verde protección */
 .borde-teams { border-top: 3px solid #6264A7; }     /* Línea morada colaboración */
@@ -403,6 +443,10 @@ body {
 .borde-clipchamp { border-top: 3px solid #5000CC; } /* Línea violeta edición */
 .borde-designer { border-top: 3px solid #FF4500; }  /* Línea naranja creatividad */
 
+
+/* ========================================================
+   COMPONENTES INTERACTIVOS Y DETALLES VISUALES (UX)
+   ======================================================== */
 
 .bloque-botones {
     display: flex;
@@ -457,7 +501,6 @@ body {
     line-height: 26px;             
     margin: 0;
 }
-
 /* Fin de HERRAMIENTAS */
 
 
