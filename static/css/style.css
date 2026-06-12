@@ -67,7 +67,10 @@ body {
     box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
 
     top: 55px;
-    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
 }
 
 .boton-javascript {
@@ -82,9 +85,10 @@ body {
     background-color: #F8F9FA;
 }
 
-
 .menu-desplegable:hover .caja-flotante {
-    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 
@@ -243,8 +247,14 @@ body {
     transform: scale(1.2);
     margin-left: 10px;
 }
+/* Fin de JAVASCRIPT */
+
+
+
+
 
 /* HERRAMIENTAS */
+
 .contenedor-principal {
     display: flex;
     justify-content: center;
@@ -270,7 +280,6 @@ body {
     text-align: center;
     padding-bottom: 30px;
 }
-
 
 .funcion {
     font-size: 2.4rem;             /* Mucho más grande que los nombres de las herramientas */
@@ -305,7 +314,14 @@ body {
     max-width: 1000px;             /* Espacio masivo para la imagen */
     background-color: #FFFFFF;
     border-radius: 12px;
-    box-shadow: 0px 25px 55px rgba(9, 31, 44, 0.12); /* Sombra corporativa con gran dispersión */
+}
+
+.sombra-windows {
+    box-shadow: 0px 25px 55px rgba(0, 164, 239, 0.15); /* Sombra tintada con el azul oficial de Windows */
+}
+
+.sombra-edge {
+    box-shadow: 0px 25px 55px rgba(0, 120, 212, 0.15); /* Sombra tintada con el azul/verde de Edge */
 }
 
 .imagen-rectangulo-grande {
@@ -327,20 +343,33 @@ body {
 
 .tarjeta-mediana {
     width: 48%;                    
-    background-color: #FFFFFF;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.04); /* Sombra muy sutil */
 }
 
-.tarjeta-extensa {
-    padding: 50px 40px;            /* Más aire interno: ideal para textos largos con botones */
+.tarjeta-extensa { padding: 50px 40px; }
+.tarjeta-compacta { padding: 30px 40px; }
+
+.tarjeta-word {
+    background-color: #F3F7FC;     /* Tono azul muy suave e清 de Word */
+    box-shadow: 0px 15px 35px rgba(43, 87, 154, 0.06); 
 }
 
-.tarjeta-compacta {
-    padding: 30px 40px;            /* Más pequeña: ideal para herramientas con poca descripción */
+.tarjeta-excel {
+    background-color: #F2F9F4;     /* Tono verde ecológico y limpio de Excel */
+    box-shadow: 0px 15px 35px rgba(16, 124, 65, 0.06);
+}
+
+.tarjeta-outlook {
+    background-color: #F3F8FC;     /* Tono azul corporativo claro de Outlook */
+    box-shadow: 0px 15px 35px rgba(0, 120, 212, 0.06);
+}
+
+.tarjeta-powerpoint {
+    background-color: #FDF5F2;     /* Tono terracota/naranja suave de PowerPoint */
+    box-shadow: 0px 15px 35px rgba(183, 71, 42, 0.06);
 }
 
 .imagen-cuadrada-mediana {
@@ -360,13 +389,20 @@ body {
 }
 
 .bloque-texto-puro {
-    width: 46%;                    /* Distribución de a dos limpia y extensa */
+    width: 46%;                    
     display: flex;
     flex-direction: column;
     gap: 12px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08); /* Una sutil línea sofisticada que organiza el contenido */
     padding-top: 20px;
 }
+
+.borde-onedrive { border-top: 3px solid #0078D4; }  /* Línea azul nube */
+.borde-defender { border-top: 3px solid #107C41; }  /* Línea verde protección */
+.borde-teams { border-top: 3px solid #6264A7; }     /* Línea morada colaboración */
+.borde-onenote { border-top: 3px solid #80397B; }   /* Línea púrpura notas */
+.borde-clipchamp { border-top: 3px solid #5000CC; } /* Línea violeta edición */
+.borde-designer { border-top: 3px solid #FF4500; }  /* Línea naranja creatividad */
+
 
 .bloque-botones {
     display: flex;
@@ -376,22 +412,24 @@ body {
     padding-top: 8px;
 }
 
+/* Botón formal de alta visibilidad para acciones principales */
 .boton-primario-azul {
     background-color: #0067B8;     
     color: #FFFFFF;
     font-size: 1rem;
     font-weight: 600;
     border: none;
-    padding: 12px 26px;            /* Relleno balanceado */
+    padding: 12px 26px;            
     border-radius: 4px;
     cursor: pointer;
 }
 
 .boton-primario-azul:hover {
     background-color: #005293;     
-    box-shadow: 0px 4px 12px rgba(0, 103, 184, 0.3); /* Sombra interactiva del color del botón */
+    box-shadow: 0px 4px 12px rgba(0, 103, 184, 0.3); 
 }
 
+/* Letras de botones interactivas para acciones secundarias */
 .enlace-letra-interactiva {
     font-size: 1.05rem;
     color: #0067B8;                
@@ -401,25 +439,29 @@ body {
 
 .enlace-letra-interactiva:hover {
     color: #091F2C;                
-    text-decoration: underline;    /* Aparece línea interactiva clásica de Microsoft */
+    text-decoration: underline;    
 }
 
 
+/* --- SELECCIÓN DE TAMAÑOS DE LETRA (JERARQUÍA COMPLETA) --- */
 .titulo-herramienta {
-    font-size: 1.8rem;             /* Nombre de la herramienta llamativo */
+    font-size: 1.8rem;             
     color: #111111;
     font-weight: 600;
     margin: 0;
 }
 
 .info-herramienta {
-    font-size: 1.1rem;             /* Letra de apoyo perfectamente legible */
-    color: #444444;                /* Cumple con las pautas de contraste y accesibilidad */
-    line-height: 26px;             /* Interlineado cómodo */
+    font-size: 1.1rem;             
+    color: #444444;                
+    line-height: 26px;             
     margin: 0;
 }
 
 /* Fin de HERRAMIENTAS */
+
+
+
 
 /* Videos */
 
