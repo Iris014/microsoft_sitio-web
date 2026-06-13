@@ -53,63 +53,6 @@ body {
     justify-content: center;
     padding: 48px 16px;
 }
-
-.contenedor-principal2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FFFFFF;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 50px;
-    border-radius: 16px;
-    box-shadow: 0px 10px 25px gray;
-    gap: 30px;
-    height: 600px;
-}
-
-.grupo-busqueda {
-    display: flex;
-    width: 320px;
-}
-
-.decoracion-arroba {
-    background-color: #E9ECEF;
-    color: #212529;
-    border: 1px solid #CED4DA;
-    padding: 6px 12px;
-    font-size: 1rem;
-    border-radius: 6px 0px;
-}
-
-.caja-entrada {
-    width: 100%;
-    background-color: #FFFFFF;
-    color: #212529;
-    border: 1px solid #CED4DA;
-    border-left: none;
-    padding: 6px 12px;
-    font-size: 1rem;
-    border-radius: 0px 6px;
-    outline: none;
-}
-
-.seccion-principal {
-    display: flex;
-    background-color: #2585eb2c;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    padding: 80px 50px;
-}
-
-.sans {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    flex: 1;
-}
-
 .pie-de-pagina {
     background-color: #091F2C;
     color: #FFFFFF;
@@ -159,20 +102,412 @@ body {
     border-radius: 6px;
 }
 
-.img {
-    height: 50px;
+
+
+
+/* INDEX o INICIO */
+
+/* ==========================================================================
+   ESTRUCTURA DE RÉPLICA SEMÁNTICA (CON CLASES INDEPENDIENTES)
+   ========================================================================== */
+
+.body-inicio {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;            
 }
 
-.img2 {
-    height: 150px;
-    width: 200px;
+/* El main actúa como contenedor intermedio del flujo de secciones */
+.contenido-global {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.imagen-rectangulo {
-    width: 400px;
-    height: 300px;
+/* --- HEADER / NAV SUPERIOR --- */
+.navegacion-principal {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.logo-contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.enlace-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.imagen-logo {
+    width: 20px;
+    flex-shrink: 0;                 
+}
+
+.texto-logo {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.enlaces-contenedor {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.enlace-menu {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #0067b8;
+}
+
+/* --- SECCIÓN 1: BIENVENIDA --- */
+.seccion-bienvenida {
+    width: 85%;
+    background-color: #e8f3fc;       
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 40px;
+    box-sizing: border-box;         
+}
+
+.texto-bienvenida {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.texto-bienvenida h1 {
+    font-size: 2.4rem;
+    margin: 0px;
+}
+
+.texto-bienvenida p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0px;
+}
+
+.imagen-bienvenida {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagen-bienvenida-asset {
+    width: 100%;
+    flex: 1;                        
+}
+
+/* --- SECCIÓN 2: SECTORES --- */
+.seccion-sectores {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px;
+}
+
+.titulo-centrado {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 40px;
+}
+
+.columnas-sectores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.columna-sector {
+    width: 31%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e1e1e1;       
+}
+
+.encabezado-tarjeta {
+    height: 60px;
+}
+
+.barra-azul { background: linear-gradient(135deg, #0078d4, #66b5ff); }
+.barra-verde { background: linear-gradient(135deg, #107c41, #85e0a3); }
+.barra-morada { background: linear-gradient(135deg, #8660a9, #e3a6ff); }
+
+.cuerpo-tarjeta {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cuerpo-tarjeta h3 {
+    font-size: 1.2rem;
+    margin: 0px;
+}
+
+.cuerpo-tarjeta p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0px;
+}
+
+/* --- SECCIÓN 3: DESARROLLADORES --- */
+.seccion-desarrolladores {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0px;
+}
+
+.texto-desarrolladores {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.texto-desarrolladores h2 {
+    font-size: 1.8rem;
+    margin: 0px;
+}
+
+.texto-desarrolladores p {
+    font-size: 1rem;
+    margin: 0px;
+}
+
+.codigo-desarrolladores {
+    width: 45%;
+    background-color: #1e1e1e;       
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.consola {
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin: 0px;
+}
+
+.consola-exito {
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #27c93f;                  
+    margin: 0px;
+}
+
+/* --- SECCIÓN 4: HITOS (Fondo Oscuro Continuo) --- */
+.seccion-hitos-oscura {
+    width: 100%;
+    background-color: #0d192b;       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contenedor-bloque-hitos {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-centrado-claro {
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 40px;
+}
+
+.columnas-videos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tarjeta-video {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reproductor {
+    width: 100%;
+    flex-grow: 1;                   
+}
+
+.tarjeta-video h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 0px;
+}
+
+.tarjeta-video p {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin: 0px;
+}
+
+
+
+/* Videos */
+
+/* ==========================================================================
+   LA FRANJA AZUL DE ARRIBA (Fiel a lo visto en la imagen)
+   ========================================================================== */
+
+.franja-azul-superior {
+    background-color: #0078d7;       /* El color azul clásico de Windows */
+    width: 100%;                     /* Ocupa todo el ancho disponible */
+    display: flex;
+    justify-content: center;         /* Centra el logo en medio de la franja */
+    padding: 20px 0px;               /* Le da altura a la franja arriba y abajo */
+}
+
+.logo-windows {
+    width: 15%;                      /* Tamaño controlado para el logo */
+    height: auto;
+}
+
+/* ==========================================================================
+   FILA 3: Réplica Exacta de la Imagen Creada (image_240da5.jpg)
+   ========================================================================== */
+
+/* Contenedor principal de la sección */
+.seccion-videos-premium {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+/* Franja superior negra para el título */
+.franja-titulo-historia {
+    background-color: #111111;
+    width: 100%;
+    max-width: 1000px; /* Ancho amplio idéntico al renderizado */
+    padding: 20px 30px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    box-sizing: border-box;
+}
+
+.funcion-premium {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* El bloque negro inferior que contiene la cuadrícula */
+.galeria-videos-premium {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;               /* Permite que los elementos se organicen en varias filas */
+    justify-content: flex-start;   /* Alineación natural hacia la izquierda */
+    gap: 30px 4%;                  /* 30px de separación abajo, 4% entre las columnas */
+    width: 100%;
+    max-width: 1000px;
+    background-color: #111111;      /* Fondo oscuro de la captura */
+    padding: 10px 30px 40px 30px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta de video grande */
+.tarjeta-video-premium {
+    width: 48%;                    /* Dos tarjetas exactas por fila en base al porcentaje */
+    background-color: #252525;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;         /* El video se apila arriba y el texto abajo */
 }
+
+/* Bordes sólidos definidos que delimitan la forma (Dentro de lo visto) */
+.borde-azul {
+    border: 2px solid #2585eb;
+}
+
+.borde-verde {
+    border: 2px solid #52b788;
+}
+
+/* El reproductor se adapta al borde curvo de arriba */
+.video-reproductor-premium {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Caja de información inferior gris como se ve en la captura */
+.info-video-premium {
+    background-color: #444444;     /* Color gris sólido e integrado */
+    padding: 15px 20px;             /* Espacio de separación para el texto */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Fuentes del bloque oscuro */
+.titulo-video-premium {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.p-video-premium {
+    color: #dddddd;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/*Fin de los videos*/
+
+
+/* Fin de INDEX o INICIO */
+
+
+
+
+
 
 .e {
     display: block;
@@ -504,65 +839,3 @@ body {
 
 
 
-
-/* Videos */
-
-
-.seccion-videos {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    padding-bottom: 80px;
-}
-
-.galeria-videos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 20px;
-}
-
-.tarjeta-video {
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0px 10px 25px gray;
-    width: 45%;
-    min-width: 320px;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.video-reproductor {
-    width: 100%;
-    height: 150px;
-    background-color: #000000;
-    border-bottom: 1px solid #E9ECEF;
-    outline: none;
-}
-
-.info-video {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.titulo-video {
-    font-size: 1.25rem;
-    color: #111111;
-    font-weight: 600;
-}
-
-.info-video p {
-    font-size: 0.95rem;
-    color: #444444;
-}
-
-/*Fin de los videos*/
