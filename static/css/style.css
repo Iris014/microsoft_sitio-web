@@ -9,32 +9,44 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+/* --- ENCABEZADO CORREGIDO CON TUS PROPIEDADES --- */
 .encabezado {
     background-color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Envía el logo al extremo izquierdo y el menú al extremo derecho */
     align-items: center;
-    padding: 16px 24px; 
+    padding: 20px 20px;             /* Espaciado de la primera imagen */
     border-bottom: 1px solid #DEE2E6;
+    
+    /* El arreglo directo: asegura que el bloque mida el total de la pantalla */
+    width: 100%;                     
 }
 
+.img {
+    width: 30px;
+}
+
+.microsoft{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* El problema era el flex: 1 que tenían estas dos clases. */
+/* Al removerlo por completo, recuperan su tamaño natural de la primera foto */
 .marca {
     font-size: 1.25rem;
     text-decoration: none;
     font-weight: 500;
     color: black;
-    flex: 1;
     padding: 10px;
 }
 
 .nav {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 25px;                      /* Separación limpia entre los tres enlaces */
     color: black;
-    flex: 1;
-    justify-content: flex-end;
 }
 
 .enlace {
@@ -53,6 +65,7 @@ body {
     justify-content: center;
     padding: 48px 16px;
 }
+
 .pie-de-pagina {
     background-color: #091F2C;
     color: #FFFFFF;
@@ -102,40 +115,206 @@ body {
     border-radius: 6px;
 }
 
+.e {
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
 
+.p {
+    text-align: center;
+    font-size: 1.05rem;
+}
 
+.imagen-cuadrada-grande {
+    width: auto;
+    height: auto;
+}
+
+/* --- TRANSICIONES E INTERACCIONES --- */
+.hover {
+    transition: transform 0.3s ease, margin-left 1s ease;
+}
+
+.hover:hover {
+    transform: scale(1.05);
+    margin-left: 5px;
+    color: gray;
+}
+
+.hover2 {
+    transition: transform 0.3s ease, margin-right 1s ease;
+}
+
+.hover2:hover {
+    transform: scale(1.1);
+    margin-right: 10px;
+}
+
+.hover3 {
+    transition: transform 0.3s ease, margin-right 1s ease;
+}
+
+.hover3:hover {
+    transform: scale(1.1);
+}
+
+.hover4 {
+    transition: transform 0.3s ease, margin-right 1s ease, color 0.3s ease;
+}
+
+.hover4:hover {
+    transform: scale(1.1);
+    color: #FFFFFF;
+    text-decoration: underline;
+}
 
 /* INDEX o INICIO */
-
 /* ==========================================================================
-   ESTRUCTURA DE RÉPLICA SEMÁNTICA (CON CLASES INDEPENDIENTES)
+   RÉPLICA CON ALINEACIÓN SIMÉTRICA USANDO COLORES BASE
    ========================================================================== */
 
 .body-inicio {
     margin: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;            
 }
 
-/* El main actúa como contenedor intermedio del flujo de secciones */
+/* Contenedor principal de la barra */
+.barra-navegacion {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;            /* Centra verticalmente el logo y el bloque de navegación */
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* --- LOGO --- */
+.bloque-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.icono-microsoft {
+    width: 30px;
+}
+
+.nombre-sitio {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #242424;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+.contenedor-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;            /* Mantiene todos los textos y el botón en el mismo eje central */
+    gap: 25px;
+}
+
+/* ENLACES NORMALES */
+.enlace-nav {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #242424;
+    
+    /* El secreto de la alineación: espacio abajo y un borde del mismo color del fondo */
+    padding-bottom: 8px;           
+    border-bottom: 3px solid #ffffff; 
+    
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Transición al pasar el cursor por un enlace normal */
+.enlace-nav:hover {
+    color: #000000;
+    border-color: #0067b8;          /* Pasa de blanco a azul de forma suave */
+}
+
+/* ENLACE ACTIVO (Ecosistema) */
+.enlace-nav-activo {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #000000;
+    
+    /* Mismo espacio exacto para que no se desfase con los demás */
+    padding-bottom: 8px;           
+    border-bottom: 3px solid #0067b8; /* Su borde es azul por defecto */
+    
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Al pasar el cursor sobre el activo, se mantiene azul y firme */
+.enlace-nav-activo:hover {
+    color: #000000;
+    border-color: #0067b8;
+}
+
+/* --- BOTÓN GLOBAL REACH --- */
+.boton-global {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #242424;
+    background-color: #eaeaea;
+    padding: 8px 16px;
+    border-radius: 6px;
+    
+    /* El botón no lleva borde inferior, por lo que le aplicamos un margen pequeño */
+    /* para equilibrar visualmente el peso del padding de los enlaces de al lado */
+    margin-bottom: 3px; 
+}
+
+.icono-mundo {
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   HOJA DE ESTILOS DE ALTA PRECISIÓN (SOLO CLASES SIMPLES)
+   ========================================================================== */
+
+body {
+    margin: 0px;
+    font-family: 'Segoe UI', SegoeUI, Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #242424;
+    /* Gris oscuro corporativo en lugar de negro puro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .contenido-global {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* --- HEADER / NAV SUPERIOR --- */
 .navegacion-principal {
     width: 85%;
+    max-width: 1600px;
+    /* Evita que se deforme en pantallas gigantes */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0px;
+    padding: 15px 0px;
+    /* Espaciado vertical exacto */
 }
 
 .logo-contenedor {
@@ -148,86 +327,102 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    /* Separación exacta entre logo y texto */
     text-decoration: none;
-    color: #000000;
+    color: #242424;
 }
 
 .imagen-logo {
-    width: 20px;
-    flex-shrink: 0;                 
+    width: 23px;
+    /* Tamaño proporcional del icono */
 }
 
 .texto-logo {
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 600;
+    /* Peso tipográfico corporativo semibold */
     margin: 0px;
 }
 
 .enlaces-contenedor {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 24px;
+    /* Espaciado del menú de navegación */
 }
 
 .enlace-menu {
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #0067b8;
+    /* Azul clásico institucional */
+    font-weight: 500;
 }
 
-/* --- SECCIÓN 1: BIENVENIDA --- */
+/* --- SECCIÓN 1: BIENVENIDA (Banner con contraste suave) --- */
 .seccion-bienvenida {
     width: 85%;
-    background-color: #e8f3fc;       
+    max-width: 1600px;
+    background-color: #f2f2f2;
+    /* Gris claro de fondo de los banners de MS */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 40px;
-    box-sizing: border-box;         
+    padding: 60px 50px;
+    /* Mayor padding interior para dar aire al diseño */
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 
 .texto-bienvenida {
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
 }
 
-.texto-bienvenida h1 {
-    font-size: 2.4rem;
+.titulo-principal {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #000000;
     margin: 0px;
 }
 
-.texto-bienvenida p {
-    font-size: 1.1rem;
+.parrafo-bienvenida {
+    font-size: 1.05rem;
     line-height: 1.5;
+    color: #242424;
     margin: 0px;
 }
 
 .imagen-bienvenida {
-    width: 50%;
+    width: 40%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .imagen-bienvenida-asset {
-    width: 100%;
-    flex: 1;                        
+    width: 80%;
+    /* Tamaño controlado para que no sature la vista */
+    height: auto;
 }
 
-/* --- SECCIÓN 2: SECTORES --- */
+/* --- SECCIÓN 2: SECTORES (Tarjetas Estilizadas) --- */
 .seccion-sectores {
     width: 85%;
+    max-width: 1600px;
     display: flex;
     flex-direction: column;
-    padding: 50px 0px;
+    padding: 60px 0px;
 }
 
 .titulo-centrado {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    font-weight: 600;
     text-align: center;
+    color: #242424;
     margin: 0px;
     padding-bottom: 40px;
 }
@@ -243,38 +438,55 @@ body {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    border: 1px solid #e1e1e1;       
+    border: 1px solid #e6e6e6;
+    /* Borde suave sutil */
 }
 
 .encabezado-tarjeta {
-    height: 60px;
+    height: 8px;
+    /* Barra de color superior delgada como en la captura */
 }
 
-.barra-azul { background: linear-gradient(135deg, #0078d4, #66b5ff); }
-.barra-verde { background: linear-gradient(135deg, #107c41, #85e0a3); }
-.barra-morada { background: linear-gradient(135deg, #8660a9, #e3a6ff); }
+/* Degradados lineales e intensidades corporativas exactas */
+.barra-azul {
+    background: linear-gradient(90deg, #0078d4, #00bcf2);
+}
+
+.barra-verde {
+    background: linear-gradient(90deg, #107c41, #109b53);
+}
+
+.barra-morada {
+    background: linear-gradient(90deg, #8660a9, #b184dd);
+}
 
 .cuerpo-tarjeta {
-    padding: 20px;
+    padding: 24px;
+    /* Espaciado generoso interno */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
-.cuerpo-tarjeta h3 {
-    font-size: 1.2rem;
+.titulo-tarjeta {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #242424;
     margin: 0px;
 }
 
-.cuerpo-tarjeta p {
+.texto-tarjeta {
     font-size: 0.95rem;
-    line-height: 1.4;
+    line-height: 1.45;
+    color: #616161;
+    /* Gris más suave para textos secundarios */
     margin: 0px;
 }
 
-/* --- SECCIÓN 3: DESARROLLADORES --- */
+/* --- SECCIÓN 3: DESARROLLADORES (Consola) --- */
 .seccion-desarrolladores {
     width: 85%;
+    max-width: 1600px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -286,62 +498,115 @@ body {
     width: 45%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
 }
 
-.texto-desarrolladores h2 {
+.titulo-desarrolladores {
     font-size: 1.8rem;
+    font-weight: 600;
+    color: #242424;
     margin: 0px;
 }
 
-.texto-desarrolladores p {
+.parrafo-desarrolladores {
     font-size: 1rem;
+    line-height: 1.5;
+    color: #616161;
     margin: 0px;
 }
 
 .codigo-desarrolladores {
-    width: 45%;
-    background-color: #1e1e1e;       
-    padding: 25px;
+    width: 48%;
+    background-color: #1b1b1b;
+    /* Fondo oscuro consola real */
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     box-sizing: border-box;
 }
 
 .consola {
-    font-family: monospace;
-    font-size: 0.95rem;
-    color: #ffffff;
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #f3f3f3;
     margin: 0px;
 }
 
 .consola-exito {
-    font-family: monospace;
-    font-size: 0.95rem;
-    color: #27c93f;                  
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #107c41;
+    /* Verde consola de éxito */
     margin: 0px;
 }
 
-/* --- SECCIÓN 4: HITOS (Fondo Oscuro Continuo) --- */
+
+
+/* --- FOOTER INSTITUCIONAL --- */
+.footer-institucional {
+    width: 100%;
+    background-color: #0f172a;
+    /* Mismo color oscuro continuo */
+    border-top: 1px solid #1e293b;
+    /* Línea divisoria muy fina */
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.contenido-footer {
+    width: 85%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto-copyright {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin: 0px;
+}
+
+.enlaces-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.enlace-footer-item {
+    color: #A0C4FF;
+    font-size: 1rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+
+
+/* Videos */
+/* --- SECCIÓN 4: HITOS (Fondo Oscuro Continuo Completamente Limpio) --- */
 .seccion-hitos-oscura {
     width: 100%;
-    background-color: #0d192b;       
+    background-color: #0f172a;
+    /* Gris azulado oscuro profundo */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 60px 0px;
 }
 
 .contenedor-bloque-hitos {
     width: 85%;
+    max-width: 1600px;
     display: flex;
     flex-direction: column;
 }
 
 .titulo-centrado-claro {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    font-weight: 600;
     color: #ffffff;
     text-align: center;
     margin: 0px;
@@ -358,213 +623,41 @@ body {
     width: 31%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
 }
 
 .reproductor {
     width: 100%;
-    flex-grow: 1;                   
+    border: 1px solid #334155;
+    /* Delicado borde contenedor para los reproductores */
 }
 
-.tarjeta-video h3 {
-    font-size: 1.1rem;
-    color: #ffffff;
-    margin: 0px;
-}
-
-.tarjeta-video p {
-    font-size: 0.9rem;
-    color: #cccccc;
-    margin: 0px;
-}
-
-
-
-/* Videos */
-
-/* ==========================================================================
-   LA FRANJA AZUL DE ARRIBA (Fiel a lo visto en la imagen)
-   ========================================================================== */
-
-.franja-azul-superior {
-    background-color: #0078d7;       /* El color azul clásico de Windows */
-    width: 100%;                     /* Ocupa todo el ancho disponible */
-    display: flex;
-    justify-content: center;         /* Centra el logo en medio de la franja */
-    padding: 20px 0px;               /* Le da altura a la franja arriba y abajo */
-}
-
-.logo-windows {
-    width: 15%;                      /* Tamaño controlado para el logo */
-    height: auto;
-}
-
-/* ==========================================================================
-   FILA 3: Réplica Exacta de la Imagen Creada (image_240da5.jpg)
-   ========================================================================== */
-
-/* Contenedor principal de la sección */
-.seccion-videos-premium {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 60px;
-}
-
-/* Franja superior negra para el título */
-.franja-titulo-historia {
-    background-color: #111111;
-    width: 100%;
-    max-width: 1000px; /* Ancho amplio idéntico al renderizado */
-    padding: 20px 30px;
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
-    box-sizing: border-box;
-}
-
-.funcion-premium {
-    color: #ffffff;
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin: 0;
-}
-
-/* El bloque negro inferior que contiene la cuadrícula */
-.galeria-videos-premium {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;               /* Permite que los elementos se organicen en varias filas */
-    justify-content: flex-start;   /* Alineación natural hacia la izquierda */
-    gap: 30px 4%;                  /* 30px de separación abajo, 4% entre las columnas */
-    width: 100%;
-    max-width: 1000px;
-    background-color: #111111;      /* Fondo oscuro de la captura */
-    padding: 10px 30px 40px 30px;
-    border-bottom-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-    box-sizing: border-box;
-}
-
-/* Tarjeta de video grande */
-.tarjeta-video-premium {
-    width: 48%;                    /* Dos tarjetas exactas por fila en base al porcentaje */
-    background-color: #252525;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;         /* El video se apila arriba y el texto abajo */
-}
-
-/* Bordes sólidos definidos que delimitan la forma (Dentro de lo visto) */
-.borde-azul {
-    border: 2px solid #2585eb;
-}
-
-.borde-verde {
-    border: 2px solid #52b788;
-}
-
-/* El reproductor se adapta al borde curvo de arriba */
-.video-reproductor-premium {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-/* Caja de información inferior gris como se ve en la captura */
-.info-video-premium {
-    background-color: #444444;     /* Color gris sólido e integrado */
-    padding: 15px 20px;             /* Espacio de separación para el texto */
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-sizing: border-box;
-}
-
-/* Fuentes del bloque oscuro */
-.titulo-video-premium {
-    color: #ffffff;
-    font-size: 1.05rem;
+.titulo-video {
+    font-size: 1.15rem;
     font-weight: 600;
-    margin: 0;
+    color: #ffffff;
+    margin: 0px;
 }
 
-.p-video-premium {
-    color: #dddddd;
+.texto-video {
     font-size: 0.9rem;
-    margin: 0;
+    line-height: 1.4;
+    color: #94a3b8;
+    /* Texto claro atenuado para el contraste oscuro */
+    margin: 0px;
 }
+
 
 /*Fin de los videos*/
 
 
 /* Fin de INDEX o INICIO */
 
-
-
-
-
-
-.e {
-    display: block;
-    margin: 0 auto;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.p {
-    text-align: center;
-    font-size: 1.05rem;
-}
-
-.imagen-cuadrada-grande{
-    width: auto;
-    height: auto;
-}
-
-.hover {
-    transition: transform 0.3s ease, margin-left 1s ease
-}
-
-.hover:hover {
-    transform: scale(1.05);
-    margin-left: 5px;
-    color: gray; 
-}
-
-.hover2 {
-    transition: transform 0.3s ease, margin-right 1s ease
-}
-
-.hover2:hover {
-    transform: scale(1.1);
-    margin-right: 10px;
-}
-
-.hover3 {
-    transition: transform 0.3s ease, margin-right 1s ease
-}
-
-.hover3:hover {
-    transform: scale(1.1);
-}
-
-.hover4 {
-    transition: transform 0.3s ease, margin-right 1s ease, color 0.3s ease
-}
-
-.hover4:hover {
-    transform: scale(1.1);
-    color: #FFFFFF;
-    text-decoration: underline;
-}
-
 /* HERRAMIENTAS */
 
+.body-herramientas {
+    background-color: #ECF0F1; /* Ese gris claro / azulado */
+}
 
 .contenedor-principal {
     width: 100%;
@@ -835,7 +928,5 @@ body {
 }
 
 
+
 /* Fin de HERRAMIENTAS */
-
-
-
