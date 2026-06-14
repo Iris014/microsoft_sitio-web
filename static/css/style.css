@@ -9,37 +9,37 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* --- ENCABEZADO CORREGIDO CON TUS PROPIEDADES --- */
 .encabezado {
-    background-color: white;
+    width: 100%;
     display: flex;
-    justify-content: space-between; /* Envía el logo al extremo izquierdo y el menú al extremo derecho */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;            /* Centra verticalmente el logo y el bloque de navegación */
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* --- LOGO --- */
+.bloque-logo {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 20px 20px;             /* Espaciado de la primera imagen */
-    border-bottom: 1px solid #DEE2E6;
-    
-    /* El arreglo directo: asegura que el bloque mida el total de la pantalla */
-    width: 100%;                     
+    gap: 8px;
+}
+
+.icono-microsoft {
+    width: 30px;
+}
+
+.nombre-sitio {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #242424;
 }
 
 .img {
     width: 30px;
-}
-
-.microsoft{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-/* El problema era el flex: 1 que tenían estas dos clases. */
-/* Al removerlo por completo, recuperan su tamaño natural de la primera foto */
-.marca {
-    font-size: 1.25rem;
-    text-decoration: none;
-    font-weight: 500;
-    color: black;
-    padding: 10px;
 }
 
 .nav {
@@ -180,43 +180,8 @@ body {
     background-color: #ffffff;
 }
 
-/* Contenedor principal de la barra */
-.barra-navegacion {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;            /* Centra verticalmente el logo y el bloque de navegación */
-    padding: 20px 40px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-}
 
-/* --- LOGO --- */
-.bloque-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-}
 
-.icono-microsoft {
-    width: 30px;
-}
-
-.nombre-sitio {
-    font-size: 1.15rem;
-    font-weight: bold;
-    color: #242424;
-}
-
-/* --- MENÚ DE NAVEGACIÓN --- */
-.contenedor-menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;            /* Mantiene todos los textos y el botón en el mismo eje central */
-    gap: 25px;
-}
 
 /* ENLACES NORMALES */
 .enlace-nav {
@@ -258,28 +223,6 @@ body {
     border-color: #0067b8;
 }
 
-/* --- BOTÓN GLOBAL REACH --- */
-.boton-global {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: #242424;
-    background-color: #eaeaea;
-    padding: 8px 16px;
-    border-radius: 6px;
-    
-    /* El botón no lleva borde inferior, por lo que le aplicamos un margen pequeño */
-    /* para equilibrar visualmente el peso del padding de los enlaces de al lado */
-    margin-bottom: 3px; 
-}
-
-.icono-mundo {
-    font-size: 1rem;
-}
 
 /* ==========================================================================
    HOJA DE ESTILOS DE ALTA PRECISIÓN (SOLO CLASES SIMPLES)
