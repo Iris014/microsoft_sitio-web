@@ -20,7 +20,6 @@ body {
     background-color: #ffffff;
 }
 
-/* --- LOGO --- */
 .bloque-logo {
     display: flex;
     flex-direction: row;
@@ -49,15 +48,43 @@ body {
     color: black;
 }
 
-.enlace {
-    color: black;
+.enlace-nav {
     text-decoration: none;
-    font-size: 1rem;
-    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #242424;
+    
+    /* El secreto de la alineación: espacio abajo y un borde del mismo color del fondo */
+    padding-bottom: 8px;           
+    border-bottom: 3px solid #ffffff; 
+    
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-.activo {
-    color: black;
+/* Transición al pasar el cursor por un enlace normal */
+.enlace-nav:hover {
+    color: #000000;
+    border-color: #0067b8;          /* Pasa de blanco a azul de forma suave */
+}
+
+/* ENLACE ACTIVO (Ecosistema) */
+.enlace-nav-activo {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #000000;
+    
+    /* Mismo espacio exacto para que no se desfase con los demás */
+    padding-bottom: 8px;           
+    border-bottom: 3px solid #0067b8; /* Su borde es azul por defecto */
+    
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Al pasar el cursor sobre el activo, se mantiene azul y firme */
+.enlace-nav-activo:hover {
+    color: #000000;
+    border-color: #0067b8;
 }
 
 .contenedor-principal {
@@ -183,45 +210,7 @@ body {
 
 
 
-/* ENLACES NORMALES */
-.enlace-nav {
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: #242424;
-    
-    /* El secreto de la alineación: espacio abajo y un borde del mismo color del fondo */
-    padding-bottom: 8px;           
-    border-bottom: 3px solid #ffffff; 
-    
-    transition: color 0.3s ease, border-color 0.3s ease;
-}
 
-/* Transición al pasar el cursor por un enlace normal */
-.enlace-nav:hover {
-    color: #000000;
-    border-color: #0067b8;          /* Pasa de blanco a azul de forma suave */
-}
-
-/* ENLACE ACTIVO (Ecosistema) */
-.enlace-nav-activo {
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: #000000;
-    
-    /* Mismo espacio exacto para que no se desfase con los demás */
-    padding-bottom: 8px;           
-    border-bottom: 3px solid #0067b8; /* Su borde es azul por defecto */
-    
-    transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-/* Al pasar el cursor sobre el activo, se mantiene azul y firme */
-.enlace-nav-activo:hover {
-    color: #000000;
-    border-color: #0067b8;
-}
 
 
 /* ==========================================================================
@@ -374,6 +363,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;   /* ← AÑADE ESTO */
+    gap: 30px;         /* ← también añade gap para separación */
 }
 
 .columna-sector {
@@ -383,6 +374,8 @@ body {
     flex-direction: column;
     border: 1px solid #e6e6e6;
     /* Borde suave sutil */
+    flex: 1;
+    min-width: 250px;   /* ← AÑADE */
 }
 
 .encabezado-tarjeta {
@@ -560,6 +553,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 30px;
 }
 
 .tarjeta-video {
@@ -567,6 +562,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    flex: 1;
+    min-width: 250px; 
 }
 
 .reproductor {
