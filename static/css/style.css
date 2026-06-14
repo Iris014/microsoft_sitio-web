@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;            /* Centra verticalmente el logo y el bloque de navegación */
+    align-items: center;
     padding: 20px 40px;
     box-sizing: border-box;
     background-color: #ffffff;
@@ -44,7 +44,7 @@ body {
 .nav {
     display: flex;
     align-items: center;
-    gap: 25px;                      /* Separación limpia entre los tres enlaces */
+    gap: 25px;
     color: black;
 }
 
@@ -53,35 +53,30 @@ body {
     font-size: 0.95rem;
     font-weight: bold;
     color: #242424;
-    
-    /* El secreto de la alineación: espacio abajo y un borde del mismo color del fondo */
-    padding-bottom: 8px;           
-    border-bottom: 3px solid #ffffff; 
-    
+
+    padding-bottom: 8px;
+    border-bottom: 3px solid #ffffff;
+
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Transición al pasar el cursor por un enlace normal */
 .enlace-nav:hover {
     color: #000000;
-    border-color: #0067b8;          /* Pasa de blanco a azul de forma suave */
+    border-color: #0067b8;
 }
 
-/* ENLACE ACTIVO (Ecosistema) */
 .enlace-nav-activo {
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: bold;
     color: #000000;
-    
-    /* Mismo espacio exacto para que no se desfase con los demás */
-    padding-bottom: 8px;           
-    border-bottom: 3px solid #0067b8; /* Su borde es azul por defecto */
-    
-    transition: color 0.3s ease, border-color 0.3s ease;
+
+    padding-bottom: 8px;
+    border-bottom: 3px solid #0067b8;
+
+    transition: color 0.3s ease, border 1px 0.3s ease;
 }
 
-/* Al pasar el cursor sobre el activo, se mantiene azul y firme */
 .enlace-nav-activo:hover {
     color: #000000;
     border-color: #0067b8;
@@ -159,7 +154,6 @@ body {
     height: auto;
 }
 
-/* --- TRANSICIONES E INTERACCIONES --- */
 .hover {
     transition: transform 0.3s ease, margin-left 1s ease;
 }
@@ -198,31 +192,16 @@ body {
 }
 
 /* INDEX o INICIO */
-/* ==========================================================================
-   RÉPLICA CON ALINEACIÓN SIMÉTRICA USANDO COLORES BASE
-   ========================================================================== */
-
 .body-inicio {
     margin: 0px;
     background-color: #ffffff;
 }
-
-
-
-
-
-
-
-/* ==========================================================================
-   HOJA DE ESTILOS DE ALTA PRECISIÓN (SOLO CLASES SIMPLES)
-   ========================================================================== */
 
 body {
     margin: 0px;
     font-family: 'Segoe UI', SegoeUI, Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
     color: #242424;
-    /* Gris oscuro corporativo en lugar de negro puro */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,17 +215,14 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* --- HEADER / NAV SUPERIOR --- */
 .navegacion-principal {
     width: 85%;
     max-width: 1600px;
-    /* Evita que se deforme en pantallas gigantes */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0px;
-    /* Espaciado vertical exacto */
 }
 
 .logo-contenedor {
@@ -260,20 +236,17 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 12px;
-    /* Separación exacta entre logo y texto */
     text-decoration: none;
     color: #242424;
 }
 
 .imagen-logo {
     width: 23px;
-    /* Tamaño proporcional del icono */
 }
 
 .texto-logo {
     font-size: 1.1rem;
     font-weight: 600;
-    /* Peso tipográfico corporativo semibold */
     margin: 0px;
 }
 
@@ -281,29 +254,24 @@ body {
     display: flex;
     flex-direction: row;
     gap: 24px;
-    /* Espaciado del menú de navegación */
 }
 
 .enlace-menu {
     text-decoration: none;
     font-size: 0.9rem;
     color: #0067b8;
-    /* Azul clásico institucional */
     font-weight: 500;
 }
 
-/* --- SECCIÓN 1: BIENVENIDA (Banner con contraste suave) --- */
 .seccion-bienvenida {
     width: 85%;
     max-width: 1600px;
     background-color: #f2f2f2;
-    /* Gris claro de fondo de los banners de MS */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 60px 50px;
-    /* Mayor padding interior para dar aire al diseño */
     box-sizing: border-box;
     margin-top: 10px;
 }
@@ -337,11 +305,9 @@ body {
 
 .imagen-bienvenida-asset {
     width: 80%;
-    /* Tamaño controlado para que no sature la vista */
     height: auto;
 }
 
-/* --- SECCIÓN 2: SECTORES (Tarjetas Estilizadas) --- */
 .seccion-sectores {
     width: 85%;
     max-width: 1600px;
@@ -363,8 +329,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;   /* ← AÑADE ESTO */
-    gap: 30px;         /* ← también añade gap para separación */
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .columna-sector {
@@ -373,17 +339,14 @@ body {
     display: flex;
     flex-direction: column;
     border: 1px solid #e6e6e6;
-    /* Borde suave sutil */
     flex: 1;
-    min-width: 250px;   /* ← AÑADE */
+    min-width: 250px;
 }
 
 .encabezado-tarjeta {
     height: 8px;
-    /* Barra de color superior delgada como en la captura */
 }
 
-/* Degradados lineales e intensidades corporativas exactas */
 .barra-azul {
     background: linear-gradient(90deg, #0078d4, #00bcf2);
 }
@@ -398,7 +361,6 @@ body {
 
 .cuerpo-tarjeta {
     padding: 24px;
-    /* Espaciado generoso interno */
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -415,11 +377,9 @@ body {
     font-size: 0.95rem;
     line-height: 1.45;
     color: #616161;
-    /* Gris más suave para textos secundarios */
     margin: 0px;
 }
 
-/* --- SECCIÓN 3: DESARROLLADORES (Consola) --- */
 .seccion-desarrolladores {
     width: 85%;
     max-width: 1600px;
@@ -454,7 +414,6 @@ body {
 .codigo-desarrolladores {
     width: 48%;
     background-color: #1b1b1b;
-    /* Fondo oscuro consola real */
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -473,19 +432,15 @@ body {
     font-family: Consolas, 'Courier New', Courier, monospace;
     font-size: 0.9rem;
     color: #107c41;
-    /* Verde consola de éxito */
     margin: 0px;
 }
 
 
 
-/* --- FOOTER INSTITUCIONAL --- */
 .footer-institucional {
     width: 100%;
     background-color: #0f172a;
-    /* Mismo color oscuro continuo */
     border-top: 1px solid #1e293b;
-    /* Línea divisoria muy fina */
     display: flex;
     justify-content: center;
     padding: 30px 0px;
@@ -522,11 +477,9 @@ body {
 
 
 /* Videos */
-/* --- SECCIÓN 4: HITOS (Fondo Oscuro Continuo Completamente Limpio) --- */
 .seccion-hitos-oscura {
     width: 100%;
     background-color: #0f172a;
-    /* Gris azulado oscuro profundo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -553,7 +506,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -563,13 +516,14 @@ body {
     flex-direction: column;
     gap: 14px;
     flex: 1;
-    min-width: 250px; 
+    min-width: 250px;
 }
 
 .reproductor {
     width: 100%;
+    max-width: 100%;
     border: 1px solid #334155;
-    /* Delicado borde contenedor para los reproductores */
+    height: auto;
 }
 
 .titulo-video {
@@ -596,7 +550,8 @@ body {
 /* HERRAMIENTAS */
 
 .body-herramientas {
-    background-color: #ECF0F1; /* Ese gris claro / azulado */
+    background-color: #ECF0F1;
+    /* Ese gris claro / azulado */
 }
 
 .contenedor-principal {
@@ -759,6 +714,7 @@ body {
     width: 70px;
     height: auto;
 }
+
 .lista-informacion-densa {
     display: flex;
     flex-direction: row;
