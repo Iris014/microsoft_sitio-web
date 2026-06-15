@@ -664,16 +664,24 @@ body {
 
 .galeria-variedad-de-dos {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
-    gap: 40px 0px;
+    gap: 40px 20px;
+    padding: 0 10%;
+}
+
+.tarjeta-de-dos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 .tarjeta-mediana {
-    width: 48%;
+    flex: 1;
+    min-width: 280px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -724,7 +732,7 @@ body {
 }
 
 .bloque-texto-puro {
-    width: 48%;
+    width: 42%;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -741,8 +749,8 @@ body {
 }
 
 .imagen-cuadrada-normal {
-    width: 320px;
-    max-width: 350px;
+    width: 75%;
+    max-width: 75%;
     border-radius: 6px;
 }
 
