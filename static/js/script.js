@@ -19,3 +19,20 @@ function cotizarLicenciasWindows() {
         alert("Ingrese una cantidad válida.");
     }
 }
+
+function descargarEdge() {
+    let cuentaMicrosoft = prompt("Ingrese su correo de desarrollador (Microsoft Account): ");
+    let claveSeguridad = prompt("Ingrese su código de verificación de Azure: ");
+    
+    if (cuentaMicrosoft === "copilot@microsoft.com") {
+        if (claveSeguridad === "azure2026") {
+            alert(`🔒 Credenciales verificadas.
+                \nAcceso concedido al canal de desarrollo Microsoft Edge con IA Copilot.`);
+        } else {
+            alert(`🔑 Código de verificación incorrecto.
+                \nDescarga bloqueada por seguridad.`);
+        }
+    } else {
+        alert("❌ Cuenta no registrada en el programa Copilot Insider.");
+    }
+}

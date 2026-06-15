@@ -767,6 +767,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     gap: 24px;
     padding-top: 8px;
 }
@@ -797,6 +798,13 @@ body {
 .enlace-letra-interactiva:hover {
     color: #091F2C;
     text-decoration: underline;
+}
+
+.centrado {
+    width: 50%;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
 }
 
 .titulo-herramienta {
