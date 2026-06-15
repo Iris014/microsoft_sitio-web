@@ -343,22 +343,6 @@ body {
     min-width: 250px;
 }
 
-.encabezado-tarjeta {
-    height: 8px;
-}
-
-.barra-azul {
-    background: linear-gradient(90deg, #0078d4, #00bcf2);
-}
-
-.barra-verde {
-    background: linear-gradient(90deg, #107c41, #109b53);
-}
-
-.barra-morada {
-    background: linear-gradient(90deg, #8660a9, #b184dd);
-}
-
 .cuerpo-tarjeta {
     padding: 24px;
     display: flex;
