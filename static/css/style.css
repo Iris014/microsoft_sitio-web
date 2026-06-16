@@ -18,7 +18,9 @@ body {
     padding: 20px 40px;
     box-sizing: border-box;
     background-color: #ffffff;
+
     position: fixed;
+    z-index: 1;
 }
 
 .bloque-logo {
