@@ -18,6 +18,7 @@ body {
     padding: 20px 40px;
     box-sizing: border-box;
     background-color: #ffffff;
+    position: fixed;
 }
 
 .bloque-logo {
@@ -86,6 +87,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 48px 16px;
+    margin-top: 95px;
 }
 
 .pie-de-pagina {
@@ -190,16 +192,28 @@ body {
     text-decoration: underline;
 }
 
-/* INDEX o INICIO */
-.body-inicio {
-    margin: 0px;
+.body-caracteristicas {
+    margin: 0;
     background-color: #ffffff;
+    font-family: 'Segoe UI', SegoeUI, Tahoma, Geneva, Verdana, sans-serif;
+    color: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-body {
-    margin: 0px;
-    font-family: 'Segoe UI', SegoeUI, Tahoma, Geneva, Verdana, sans-serif;
+.seccion-caracteristicas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 95px;
+}
+
+/* INDEX o INICIO */
+.body-inicio {
+    margin: 0;
     background-color: #ffffff;
+    font-family: 'Segoe UI', SegoeUI, Tahoma, Geneva, Verdana, sans-serif;
     color: #242424;
     display: flex;
     flex-direction: column;
@@ -211,7 +225,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 95px;
 }
 
 .navegacion-principal {
