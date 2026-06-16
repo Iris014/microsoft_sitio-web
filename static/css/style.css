@@ -160,7 +160,6 @@ body {
 
 .hover:hover {
     transform: scale(1.05);
-    margin-left: 5px;
     color: gray;
 }
 
