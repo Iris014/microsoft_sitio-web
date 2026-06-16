@@ -546,7 +546,11 @@ body {
 /* HERRAMIENTAS */
 
 .body-herramientas {
+    margin: 0;
     background-color: #ECF0F1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contenedor-principal {
